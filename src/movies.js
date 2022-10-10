@@ -24,9 +24,15 @@ function scoresAverage(moviesArray) {
         return 0;
     }
     let sum = moviesArray.reduce(function(accumulator, curValue){
-    return accumulator + curValue.score / moviesArray.length;
+        if (curValue.score) {
+            return accumulator + curValue.score
+        } else {
+            return accumulator
+        }
+    //return accumulator + curValue.score / moviesArray.length;
 },0);
-return Math.round(sum * 100) / 100;
+let result = Math.round(sum / moviesArray.length * 100) / 100;
+return result;
 }
 
 scoresAverage(movies);
