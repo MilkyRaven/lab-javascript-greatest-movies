@@ -67,7 +67,7 @@ function orderAlphabetically(moviesArray) {
 function turnHoursToMinutes(moviesArray) {
     let moviesArrayCopy = [...moviesArray];
     moviesArrayCopy.map((el) => {
-        el.duration * 1
+        el.duration * 
     })
     console.log (el.duration * 1);
 }
